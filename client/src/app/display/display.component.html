@@ -1,1 +1,8 @@
-<h2>My Music</h2>
+<h1>Music List</h1>
+<p-dataView [value]="Musiclist">
+    <ng-template let-music pTemplate="listItem">
+        <div class="p-col-12">
+            {{music.title}}
+        </div>
+    </ng-template>
+</p-dataView>

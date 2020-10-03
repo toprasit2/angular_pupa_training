@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
 import { HomeComponent } from './home/home.component';
+import { ManagementComponent } from './management/management.component';
+import { DataViewModule } from 'primeng/dataview';
 
 
 @NgModule({
-  declarations: [AppComponent, DisplayComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule],
+  declarations: [AppComponent, DisplayComponent, HomeComponent, ManagementComponent],
+  imports: [BrowserModule, AppRoutingModule, ButtonModule, DataViewModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
