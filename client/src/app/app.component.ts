@@ -6,7 +6,6 @@ import { MusicService } from './music.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'client';
   constructor(private musicService: MusicService) {
     console.log(this.musicService.listMusic());
     const music = this.musicService.loadMusic(
