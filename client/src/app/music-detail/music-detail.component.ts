@@ -15,7 +15,7 @@ export class MusicDetailComponent implements OnInit {
     private location: Location,
     private route: ActivatedRoute,
     private musicService: MusicService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
   ) { 
      
   }

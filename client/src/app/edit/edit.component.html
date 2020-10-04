@@ -1,0 +1,16 @@
+<h5>Music Name</h5>
+<span class="p-float-label">
+    <input type="text" style="width: 100%;" pInputText [(ngModel)]="music.title">
+</span>
+<h5>Youtube ID</h5>
+<span class="p-float-label">
+    <input type="text" style="width: 100%;" pInputText [(ngModel)]="music.youtubeId">
+</span>
+<h5>Image Link</h5>
+<span class="p-float-label">
+    <input type="text" style="width: 100%;" pInputText [(ngModel)]="music.imageLink">
+</span>
+<p>
+    <button (click)=goback()>Cancle</button>
+    <button (click)=upDateMusicAndBack(music.id,music) >Submit</button>
+</p>

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Music, MusicService } from '../music.service';
@@ -12,6 +13,7 @@ export class ManagementComponent implements OnInit {
   constructor(
     private musicService: MusicService,
     private router: Router,
+    private location: Location,
     ) {
     
   }
@@ -21,6 +23,7 @@ export class ManagementComponent implements OnInit {
   }
   deLete(id) {
     this.musicService.deleteMusic(id);
+    this.musicList = this.musicService.listMusic();
   }
   goToEditPage(id) {
     this.router.navigate([`/edit/${id}`]);

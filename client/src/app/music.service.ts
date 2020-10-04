@@ -71,4 +71,21 @@ export class MusicService {
     this.MUSIC_LIST = results;
     return true;
   }
+
+  updateMusic(id, data: Music): Music {
+    const results =  _.filter(this.MUSIC_LIST, (music) => {
+      return music.id !== id;
+    });
+    this.MUSIC_LIST = results;
+    const result = {
+      id: id,
+      ...data,
+    };
+    console.log(this.MUSIC_LIST);
+    this.MUSIC_LIST.push(result);
+    return _.find(this.MUSIC_LIST, (music) => {
+      return music.id === id;
+    });
+    
+  }
 }
