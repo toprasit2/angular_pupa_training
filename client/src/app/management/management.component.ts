@@ -21,11 +21,21 @@ export class ManagementComponent implements OnInit {
   ngOnInit(): void {
     this.musicList = this.musicService.listMusic();
   }
+
   deLete(id) {
     this.musicService.deleteMusic(id);
     this.musicList = this.musicService.listMusic();
   }
+
   goToEditPage(id) {
     this.router.navigate([`/edit/${id}`]);
+  }
+
+  goToCreatePage() {
+    this.router.navigate([`/create`]);
+  }
+
+  goback() {
+    this.location.back();
   }
 }

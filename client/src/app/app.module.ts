@@ -13,12 +13,14 @@ import { EditComponent } from './edit/edit.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CreateComponent } from './create/create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AppComponent, ManagementComponent, DisplayListComponent, MenuComponent, MusicDetailComponent, EditComponent],
+  declarations: [AppComponent, ManagementComponent, DisplayListComponent, MenuComponent, MusicDetailComponent, EditComponent, CreateComponent],
   imports: [
-    FormsModule,CommonModule,BrowserModule, AppRoutingModule, ButtonModule, TableModule, OrderListModule, InputTextModule],
+    FormsModule, CommonModule, BrowserModule, AppRoutingModule, ButtonModule, TableModule, OrderListModule, InputTextModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

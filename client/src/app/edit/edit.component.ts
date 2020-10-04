@@ -2,6 +2,8 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Music, MusicService } from '../music.service';
+import { FormGroup, FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit',
@@ -9,7 +11,12 @@ import { Music, MusicService } from '../music.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  music: Music
+  music = new FormGroup({
+    title: new FormControl(''),
+    youtubeId: new FormControl(''),
+    imageLink: new FormControl(''),
+
+  }); 
   constructor(
     private musicService: MusicService,
     private location: Location,
@@ -21,16 +28,17 @@ export class EditComponent implements OnInit {
   }
   loadmusic() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.music = this.musicService.loadMusic(id)
-    if(!this.music)
+    this.music.patchValue(this.musicService.loadMusic(id));
+    if(!this.music.value)
       this.goback();      
   }
 
   goback() {
     this.location.back();
   }
-  upDateMusicAndBack(id,music) {
-    this.music = this.musicService.updateMusic(id, music);
+  upDateMusicAndBack() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.music.patchValue(this.musicService.updateMusic(id, this.music.value));
     this.location.back();
   }
 }

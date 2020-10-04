@@ -34,8 +34,9 @@ export class MusicDetailComponent implements OnInit {
     if(this.music)
       return this.transform(`https://www.youtube.com/embed/${this.music.youtubeId}`);
     else 
-      return this.location.back();
+      return this.goback();
   }
+
   goback(){
     this.location.back();
   }
