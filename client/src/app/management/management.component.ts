@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService, Music } from '../music.service';
 
 @Component({
   selector: 'app-management',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./management.component.css']
 })
 export class ManagementComponent implements OnInit {
+  list: Music[]
+  constructor( private musiclist: MusicService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.list = this.musiclist.listMusic()
   }
 
 }

@@ -29,7 +29,7 @@ export class ShowdisplayComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.show_musicID = this.musicService.loadMusic(id)
     if(this.show_musicID)
-      return this.transfrom(`https://www.youtube.com/embed/${this.show_musicID?.youtubeId}`)
+      return this.transfrom(`https://www.youtube.com/embed/${this.show_musicID?.youtubeId}?autoplay=1&mute=1`)
     else
       return this.location.back();
   }
