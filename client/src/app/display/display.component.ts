@@ -10,7 +10,7 @@ export class DisplayComponent implements OnInit {
   Musiclist : Music[]
   constructor( private musicservice: MusicService) { }
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.Musiclist = this.musicservice.listMusic()
     console.log(this.Musiclist)
   }
