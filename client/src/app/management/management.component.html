@@ -1,1 +1,25 @@
-
+<div class="card">
+    <h5 class="center">MUSIC LIST</h5>
+    <p-table [value]="musicList" [scrollable]="true" scrollHeight="150px">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-music>
+            <tr>
+                <td>{{music.title}}</td>
+                <td><img style="width: 60px; height: 50px;" src={{music.imageLink}}></td>
+                <td>
+                    <button (click)=goToEditPage(music.id)>Edit</button>
+                </td>
+                <td>
+                    <button (click)=deLete(music.id)>Delete</button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

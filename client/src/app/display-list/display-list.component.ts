@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Music, MusicService } from '../music.service';
 
 @Component({
@@ -8,12 +10,22 @@ import { Music, MusicService } from '../music.service';
 })
 export class DisplayListComponent implements OnInit {
   musicList: Music[]
-  constructor(private musicService: MusicService) {
-    
+  constructor(
+      private musicService: MusicService,
+      private router: Router,
+      private location: Location,
+     ) {
+
   }
 
   ngOnInit(): void {
     this.musicList = this.musicService.listMusic();
   }
-  
+
+  goToYoutubePage(id) {
+    this.router.navigate([`/youtube/${id}`]);
+  }
+  goback() {
+    this.location.back();
+  }
 }

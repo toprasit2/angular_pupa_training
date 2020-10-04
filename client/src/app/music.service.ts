@@ -44,6 +44,7 @@ export class MusicService {
   }
 
   loadMusic(id): Music {
+    console.log(this.MUSIC_LIST)
     return _.find(this.MUSIC_LIST, (music) => {
       return music.id === id;
     });
