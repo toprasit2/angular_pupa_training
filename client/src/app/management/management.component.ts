@@ -8,10 +8,19 @@ import { MusicService, Music } from '../music.service';
 })
 export class ManagementComponent implements OnInit {
   list: Music[]
-  constructor( private musiclist: MusicService) { }
+  deleID: boolean
+
+  constructor( 
+    private musiclist: MusicService,
+    ) { }
 
   ngOnInit(): void{
     this.list = this.musiclist.listMusic()
+   
+  }
+  delete(id){
+    this.musiclist.deleteMusic(id);
+    this.list = this.musiclist.listMusic();
   }
 
 }
