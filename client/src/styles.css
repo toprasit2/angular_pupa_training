@@ -8,3 +8,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  padding: 0 10%;
+}
+
+.fullwidth,
+.fullwidth > *,
+.fullwidth > * > * {
+  width: 100%;
+}
+
+.fullheight * {
+  height: 100%;
+}

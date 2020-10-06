@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 
-interface Music {
+export interface Music {
   id?: number;
   title: string;
   youtubeId: string;
@@ -69,5 +69,12 @@ export class MusicService {
     });
     this.MUSIC_LIST = results;
     return true;
+  }
+
+  editMusic(id, data) {
+    const index = this.MUSIC_LIST.findIndex((music) => music.id === id);
+    this.MUSIC_LIST[index] = {
+      ...data,
+    };
   }
 }

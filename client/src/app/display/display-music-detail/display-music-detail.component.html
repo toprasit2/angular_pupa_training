@@ -1,0 +1,21 @@
+<p-button
+  icon="pi pi-angle-left"
+  styleClass="p-button-rounded p-button-secondary"
+  label="BACK"
+  (onClick)="back()"
+></p-button>
+<div *ngIf="music">
+  <h1 class="center">{{ music.title }}</h1>
+  <div class="flex-center">
+    <iframe
+      style="width: 80vw; height: 80vh"
+      [src]="
+        'https://www.youtube.com/embed/' + music?.youtubeId + '?autoplay=1'
+          | safeUrl
+      "
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay"
+    ></iframe>
+  </div>
+</div>
