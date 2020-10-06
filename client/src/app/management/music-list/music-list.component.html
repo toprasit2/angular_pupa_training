@@ -1,0 +1,64 @@
+<div class="container">
+  <p-table [value]="musicList" styleClass="p-datatable-customers">
+    <ng-template pTemplate="caption">
+      <div class="space-between">
+        <h3>List of Music</h3>
+        <a routerLink="/music/create">
+          <p-button icon="pi pi-plus" label="Create"></p-button>
+        </a>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 5em">#</th>
+        <th>Title</th>
+        <th style="width: 10em">Youtube Link</th>
+        <th style="width: 10em"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-music>
+      <tr>
+        <td>
+          <div class="p-multiselect-representative-option">
+            <img
+              src="{{ music.imageLink }}"
+              style="
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+              "
+            />
+          </div>
+        </td>
+        <td>{{ music.title }}</td>
+        <td>
+          <a href="https://www.youtube.com/watch?v={{ music.youtubeId }}">
+            {{ music.youtubeId }}
+          </a>
+        </td>
+        <td>
+          <a routerLink="/music/edit/{{ music.id }}">
+            <p-button
+              icon="pi pi-pencil"
+              styleClass="p-button-rounded p-button-secondary"
+            ></p-button>
+          </a>
+          &nbsp;
+          <p-button
+            icon="pi pi-trash"
+            styleClass="p-button-rounded p-button-danger"
+            (onClick)="deleteMusic(music.id)"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="4">
+            <h5 class="center">No musics found.</h5>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

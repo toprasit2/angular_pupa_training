@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .container {
   padding: 0 10%;
 }

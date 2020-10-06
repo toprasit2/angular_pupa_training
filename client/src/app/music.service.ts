@@ -71,8 +71,8 @@ export class MusicService {
     return true;
   }
 
-  editMusic(id, data) {
-    const index = this.MUSIC_LIST.findIndex((music) => music.id === id);
+  editMusic(data) {
+    const index = this.MUSIC_LIST.findIndex((music) => music.id === data.id);
     this.MUSIC_LIST[index] = {
       ...data,
     };

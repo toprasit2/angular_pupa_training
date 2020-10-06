@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Music, MusicService } from '../../music.service';
 
@@ -9,13 +8,9 @@ import { Music, MusicService } from '../../music.service';
 })
 export class DisplayMusicListComponent implements OnInit {
   musicList: Music[];
-  constructor(private musicService: MusicService, private location: Location) {}
+  constructor(private musicService: MusicService) {}
 
   ngOnInit(): void {
     this.musicList = this.musicService.listMusic();
-  }
-
-  back() {
-    this.location.back();
   }
 }

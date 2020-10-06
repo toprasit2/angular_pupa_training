@@ -4,7 +4,9 @@ import { SharedModule } from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisplayModule } from './display/display.module';
+import { ManagementModule } from './management/management.module';
 import { HomeModule } from './home/home.module';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +14,9 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    ButtonModule,
     DisplayModule,
+    ManagementModule,
     SharedModule,
   ],
   providers: [],

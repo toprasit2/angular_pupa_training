@@ -1,1 +1,9 @@
+<p-button
+  icon="pi pi-angle-left"
+  styleClass="p-button-rounded p-button-secondary"
+  label="BACK"
+  (onClick)="back()"
+  id="backButton"
+  *ngIf="!isRouteHome()"
+></p-button>
 <router-outlet></router-outlet>
