@@ -37,7 +37,7 @@ export class MusicService {
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
   listMusic(): Music[] {
     return this.MUSIC_LIST;
@@ -61,6 +61,14 @@ export class MusicService {
     this.MUSIC_LIST.push(result);
 
     return result;
+  }
+
+  updateMusic(id, new_data: Music): boolean {
+    this.MUSIC_LIST = [
+      ...this.MUSIC_LIST.map((music) => music.id == id ? { id, ...new_data } : music
+      )
+    ]
+    return true;
   }
 
   deleteMusic(id): boolean {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Music, MusicService } from '../music.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-management',
   templateUrl: './management.component.html',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagementComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private musicService: MusicService ,
+    private location:Location
+  ) { }
+  musics: Music[];
+  
   ngOnInit(): void {
+    this.musics = this.musicService.listMusic();
+  }
+  delete(id){
+    this.musicService.deleteMusic(id);
+    this.musics = this.musicService.listMusic();
+  }
+  back(): void{
+    this.location.back();
   }
 
 }

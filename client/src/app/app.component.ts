@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MusicService } from './music.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -10,4 +9,5 @@ export class AppComponent {
   constructor(
     private route: ActivatedRoute,
   ) {}
+
 }

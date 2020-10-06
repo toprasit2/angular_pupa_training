@@ -8,10 +8,15 @@ import { ManagementComponent } from './management/management.component';
 import { MenuComponent } from './menu/menu.component';
 import {DataViewModule} from 'primeng/dataview';
 import { PlayYoutubeComponent } from './play-youtube/play-youtube.component';
+import {TableModule} from 'primeng/table';
+import { EditComponent } from './edit/edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
-  declarations: [AppComponent, DisplayComponent, ManagementComponent, MenuComponent, PlayYoutubeComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule,DataViewModule],
+  declarations: [AppComponent, DisplayComponent, ManagementComponent, MenuComponent, PlayYoutubeComponent, EditComponent],
+  imports: [ReactiveFormsModule ,FormsModule,CommonModule, BrowserModule, AppRoutingModule, ButtonModule,DataViewModule,TableModule],
   providers: [],
   bootstrap: [AppComponent],
 })

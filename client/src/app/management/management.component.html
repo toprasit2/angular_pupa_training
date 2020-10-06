@@ -1,1 +1,24 @@
-<p>management works!</p>
+<h1>List Management</h1>
+<p-table [value]="musics">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>title</th>
+            <th>youtubeId</th>
+            <th>imageLink</th>
+            <th>Edit</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-music>
+        <tr>
+            <td>{{music.title}}</td>
+            <td>{{music.youtubeId}}</td>
+
+            <td><img src="{{music.imageLink}}" width="200" height="130" /></td>
+            <td><a routerLink="/Management/{{music.id}}"><button pButton type="button" label="EDIT"></button></a>
+                <p-button label="DELETE" (click)=delete(music.id)></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<a routerLink="/ADD"><button pButton type="button" label="ADD"></button></a>
+<p-button label="BACK" (click)="back()"></p-button>

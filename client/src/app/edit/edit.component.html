@@ -1,0 +1,20 @@
+<h3>{{music.title}}</h3>
+<form [formGroup]="musicgroup" (ngSubmit)="updatemusic()">
+  <label>
+    title:
+    <input type="text" formControlName="title">
+  </label>
+  <br>
+  <label>
+    youtubeId:
+    <input type="text" formControlName="youtubeId">
+  </label>
+  <br>
+  <label>
+    imageLink:
+    <input type="text" formControlName="imageLink">
+  </label>
+  <p-button label="Update Music" type="submit"></p-button><br>
+
+</form>
+<p-button label="BACK" (click)="back()"></p-button>

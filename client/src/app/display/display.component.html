@@ -1,9 +1,8 @@
 <h1>Music List</h1>
 <a *ngFor="let music of musics">
-    
     <h2>{{music.title}}</h2>
     <a routerLink = "/Display/{{music.id}}">
     <img src="{{music.imageLink}}"/>
-    </a>
-    
+    </a> 
 </a>
+<p-button label="BACK" (click)="back()"></p-button>
