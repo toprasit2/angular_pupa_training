@@ -1,0 +1,27 @@
+div {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.lovepik.com/photo/40103/6336.jpg_wh860.jpg");
+    background-repeat: 2 repeat;
+    background-position: center;
+}
+h1 >span {
+    background-color: rgb(209, 82, 82);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+h2 >span {
+
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

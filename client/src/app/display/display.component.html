@@ -1,8 +1,12 @@
-<h1>Music List</h1>
-<a *ngFor="let music of musics">
-    <h2>{{music.title}}</h2>
-    <a routerLink = "/Display/{{music.id}}">
-    <img src="{{music.imageLink}}"/>
-    </a> 
+<div>
+<h1 class="flex-center"><span>Music List</span></h1>
+<a *ngFor="let music of musics" >
+    <h2 class="flex-center"><span>{{music.title}}</span></h2>
+    <div class="flex-center">
+    <span routerLink = "/Display/{{music.id}}" >
+    <img   src="{{music.imageLink}}" width="460" height="330" />
+    </span> </div>
+    <br><br><br>
 </a>
 <p-button label="BACK" (click)="back()"></p-button>
+</div>

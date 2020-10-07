@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.lovepik.com/photo/40007/9104.jpg_wh860.jpg");
+    background-repeat: 2 repeat;
+    background-position: center;
+}
+h1 {
+    border: none;
+  background: rgb(46, 86, 170);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
