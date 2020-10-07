@@ -12,10 +12,11 @@ import {TableModule} from 'primeng/table';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AddComponent } from './add/add.component';
 
 
 @NgModule({
-  declarations: [AppComponent, DisplayComponent, ManagementComponent, MenuComponent, PlayYoutubeComponent, EditComponent],
+  declarations: [AppComponent, DisplayComponent, ManagementComponent, MenuComponent, PlayYoutubeComponent, EditComponent, AddComponent],
   imports: [ReactiveFormsModule ,FormsModule,CommonModule, BrowserModule, AppRoutingModule, ButtonModule,DataViewModule,TableModule],
   providers: [],
   bootstrap: [AppComponent],

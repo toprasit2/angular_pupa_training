@@ -1,0 +1,20 @@
+<p>CREATE MUSIC</p>
+<form [formGroup]="musicgroup" (ngSubmit)="add()">
+    <label>
+      title:
+      <input type="text" formControlName="title">
+    </label>
+    <br>
+    <label>
+      youtubeId:
+      <input type="text" formControlName="youtubeId">
+    </label>
+    <br>
+    <label>
+      imageLink:
+      <input type="text" formControlName="imageLink"><br>
+    </label>
+    <p-button label="ADD" type="submit"></p-button><br>
+  
+  </form>
+  <p-button label="BACK" (click)="back()"></p-button>
