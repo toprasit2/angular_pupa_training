@@ -1,6 +1,8 @@
 <div *ngIf="music" class="center">
-    <iframe  width="1000" height="600" [src]="loadmusic()" frameborder="0"
+    <iframe width="1500" height="800" [src]="loadmusic()" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </div>
-<button (click)=goback()>back</button>
+<div class="p-grid">
+    <p-button class="p-col" (click)=goback()>back</p-button>
+</div>

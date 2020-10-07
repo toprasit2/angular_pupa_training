@@ -32,7 +32,7 @@ export class MusicDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.music = this.musicService.loadMusic(id)
     if(this.music)
-      return this.transform(`https://www.youtube.com/embed/${this.music.youtubeId}`);
+      return this.transform(`https://www.youtube.com/embed/${this.music.youtubeId}?autoplay=1`);
     else 
       return this.goback();
   }

@@ -81,7 +81,6 @@ export class MusicService {
       id: id,
       ...data,
     };
-    console.log(this.MUSIC_LIST);
     this.MUSIC_LIST.push(result);
     return _.find(this.MUSIC_LIST, (music) => {
       return music.id === id;

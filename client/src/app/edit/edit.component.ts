@@ -15,7 +15,6 @@ export class EditComponent implements OnInit {
     title: new FormControl(''),
     youtubeId: new FormControl(''),
     imageLink: new FormControl(''),
-
   }); 
   constructor(
     private musicService: MusicService,
@@ -28,8 +27,11 @@ export class EditComponent implements OnInit {
   }
   loadmusic() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.music.patchValue(this.musicService.loadMusic(id));
-    if(!this.music.value)
+    const music = this.musicService.loadMusic(id)
+    if(music){
+      this.music.patchValue(music);
+    }
+    else
       this.goback();      
   }
 
