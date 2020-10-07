@@ -1,0 +1,20 @@
+#contact{
+    background-color: rgb(222, 236, 214);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  h1 >span {
+    background-color: rgb(209, 82, 82);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

@@ -1,20 +1,22 @@
-<h3>{{music.title}}</h3>
+<div id="contact">
+<h1><span>{{music.title}}</span></h1>
 <form [formGroup]="musicgroup" (ngSubmit)="updatemusic()">
   <label>
-    title:
+    title:<br>
     <input type="text" formControlName="title">
   </label>
-  <br>
+  <br><br>
   <label>
-    youtubeId:
+    youtubeId:<br>
     <input type="text" formControlName="youtubeId">
   </label>
-  <br>
+  <br><br>
   <label>
-    imageLink:
+    imageLink:<br>
     <input type="text" formControlName="imageLink">
   </label>
+  <br><br><br>
   <p-button label="Update Music" type="submit"></p-button><br>
-
+<br>
 </form>
-<p-button label="BACK" (click)="back()"></p-button>
+<p-button label="BACK" (click)="back()"></p-button></div>
