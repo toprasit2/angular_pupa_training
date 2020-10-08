@@ -19,17 +19,15 @@
     <ng-template pTemplate="body" let-music>
       <tr>
         <td>
-          <div class="p-multiselect-representative-option">
-            <img
-              src="{{ music.imageLink }}"
-              style="
-                border-radius: 50%;
-                width: 32px;
-                height: 32px;
-                object-fit: cover;
-              "
-            />
-          </div>
+          <img
+            src="{{ music.imageLink }}"
+            style="
+              border-radius: 50%;
+              width: 32px;
+              height: 32px;
+              object-fit: cover;
+            "
+          />
         </td>
         <td>{{ music.title }}</td>
         <td>
@@ -44,11 +42,11 @@
               styleClass="p-button-rounded p-button-secondary"
             ></p-button>
           </a>
-          &nbsp;
           <p-button
             icon="pi pi-trash"
             styleClass="p-button-rounded p-button-danger"
             (onClick)="deleteMusic(music.id)"
+            [style]="{'margin-left': '1em'}"
           ></p-button>
         </td>
       </tr>
@@ -56,7 +54,7 @@
     <ng-template pTemplate="emptymessage">
       <tr>
         <td colspan="4">
-            <h5 class="center">No musics found.</h5>
+          <h5 class="center">No musics found.</h5>
         </td>
       </tr>
     </ng-template>

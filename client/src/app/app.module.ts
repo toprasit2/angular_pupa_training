@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisplayModule } from './display/display.module';
 import { ManagementModule } from './management/management.module';
+import { SushiModule } from './sushi/sushi.module';
 import { HomeModule } from './home/home.module';
 import { ButtonModule } from 'primeng/button';
 
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
     DisplayModule,
     ManagementModule,
     SharedModule,
+    SushiModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
