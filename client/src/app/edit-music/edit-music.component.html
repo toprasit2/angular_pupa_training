@@ -3,7 +3,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="container register">
+<div class="container register" [formGroup]="musicgroup">
     <div class="row" style="justify-content: center;">
         <div class="col-md-9 register-right">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -14,17 +14,17 @@
                     <div class="row register-form" style="justify-content: center;">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="MUSIC NAME " value="" />
+                                <input type="text" class="form-control" formControlName="title" placeholder="MUSIC NAME " value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="YOUTUBE ID " value="" />
+                                <input type="text" class="form-control" formControlName="youtubeId" placeholder="YOUTUBE ID " value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" value="IMAGE" /><button pButton type="button" label="browse"
+                                <input type="text" class="form-control" formControlName="imageLink" placeholder="imageLink" value="" /><button pButton type="button" label="browse"
                                     class="p-button-raised p-button-rounded"></button>
                             </div>
                             <div>
-                                <input type="submit" class="btnRegister" value="SAVE" />
+                                <button type="submit" class="btnRegister" (click)="updatemusic()"  >SAVE</button>
                             </div>
                         </div>
                     </div>

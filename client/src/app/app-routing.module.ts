@@ -14,9 +14,8 @@ const routes: Routes = [
   { path: 'display', component: DisplayComponent },
   { path: 'management', component: ManagementComponent },
   { path: 'showdisplay/:id', component: ShowdisplayComponent },
-  { path: 'add_music', component: AddMusicComponent },
   { path: 'management/add-music', component: AddMusicComponent },
-  { path: 'management/edit-music', component: EditMusicComponent},
+  { path: 'management/:id', component: EditMusicComponent},
 ];
 
 @NgModule({

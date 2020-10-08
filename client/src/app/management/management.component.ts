@@ -7,8 +7,8 @@ import { MusicService, Music } from '../music.service';
   styleUrls: ['./management.component.css']
 })
 export class ManagementComponent implements OnInit {
+  
   list: Music[]
-  deleID: boolean
 
   constructor( 
     private musiclist: MusicService,

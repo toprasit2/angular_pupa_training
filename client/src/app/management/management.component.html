@@ -16,7 +16,7 @@
             <td style="text-align:center"><img src="{{product.imageLink}}" style="width:100px; height:100px;">
             </td>
             <td>{{product.title}}</td>
-            <td style="text-align: center;"><a routerLink='/management/edit-music'><button pButton type="button" label="Edit"
+            <td style="text-align: center;"><a routerLink='/management/{{product.id}}'><button pButton type="button" label="Edit"
                     class="p-button-raised p-button-rounded"></button></a></td>
             <td style="text-align: center;"><button pButton type="button" label="Delete" (click)=delete(product.id)
                     icon="pi pi-trash" style="background-color: darkred;"></button></td>

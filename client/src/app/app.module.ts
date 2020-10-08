@@ -11,11 +11,13 @@ import { ShowdisplayComponent } from './showdisplay/showdisplay.component';
 import {TableModule} from 'primeng/table';
 import { AddMusicComponent } from './add-music/add-music.component';
 import { EditMusicComponent } from './edit-music/edit-music.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [AppComponent, DisplayComponent, HomeComponent, ManagementComponent, ShowdisplayComponent, AddMusicComponent, EditMusicComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule, DataViewModule,TableModule],
+  imports: [BrowserModule, AppRoutingModule, ButtonModule, DataViewModule,TableModule,CommonModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
