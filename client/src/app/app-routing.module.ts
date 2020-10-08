@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'management', component: ManagementComponent },
   { path: 'showdisplay/:id', component: ShowdisplayComponent },
   { path: 'add_music', component: AddMusicComponent },
+  { path: 'management/add-music', component: AddMusicComponent },
 ];
 
 @NgModule({

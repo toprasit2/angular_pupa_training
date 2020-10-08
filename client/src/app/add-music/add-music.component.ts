@@ -8,7 +8,10 @@ import { Music, MusicService } from '../music.service';
 })
 export class AddMusicComponent implements OnInit {
 
-  constructor() { }
+  add_music : Music  
+  constructor(
+    private musicservice: MusicService,
+  ) {}
 
   ngOnInit(): void {
   }
