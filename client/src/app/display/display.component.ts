@@ -12,7 +12,6 @@ export class DisplayComponent implements OnInit {
 
   ngOnInit(): void{
     this.Musiclist = this.musicservice.listMusic()
-    console.log(this.Musiclist)
   }
 
 }
