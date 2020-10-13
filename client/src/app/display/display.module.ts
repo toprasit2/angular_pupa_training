@@ -5,10 +5,9 @@ import { DisplayRoutingModule } from './display-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [DisplayComponent],
   imports: [
     CommonModule,
-    DisplayComponent,
     DisplayRoutingModule,
   ]
 })
