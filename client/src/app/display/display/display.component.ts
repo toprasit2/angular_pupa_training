@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Music, MusicService } from 'src/app/music.service';
 
 @Component({
   selector: 'app-display',
@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-
-  constructor() { }
+  musiclist: Music[];
+  constructor(private musicservice: MusicService) { }
 
   ngOnInit(): void {
+    this.musiclist = this.musicservice.listMusic();
   }
 
 }
