@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 
-interface Music {
+export interface Music {
   id?: number;
   title: string;
   youtubeId: string;
