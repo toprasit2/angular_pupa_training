@@ -20,11 +20,14 @@ export class MusicEditComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.music = this.musicService.loadMusic(id);
+    this.musicService.loadMusic(id).subscribe((data) => {
+      this.music = data;
+    });
   }
 
   submit() {
-    this.musicService.editMusic(this.musicForm.value);
-    this.location.back();
+    this.musicService.editMusic(this.musicForm.value).subscribe((_) => {
+      this.location.back();
+    });
   }
 }

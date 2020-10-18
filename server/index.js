@@ -7,6 +7,10 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+
+var cors = require('cors')
+app.use(cors())
+
 const port = 3000
 
 let MUSIC_LIST = [
@@ -37,7 +41,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 app.get('/music', (req, res) => {
-    res.send({resut: MUSIC_LIST, totalCount: MUSIC_LIST.length})
+    res.send({result: MUSIC_LIST, totalCount: MUSIC_LIST.length})
 })
 app.get('/music/:id', (req, res) => {
     res.send(_.find(MUSIC_LIST, (music) => {
@@ -47,8 +51,8 @@ app.get('/music/:id', (req, res) => {
 
 app.post('/music/create', (req, res) => {
     const result = {
-        id: uuidv4(),
         ...req.body,
+        id: uuidv4(),
     };
     MUSIC_LIST.push(result);
     res.send(result);
@@ -59,7 +63,7 @@ app.put('/music/edit', (req, res) => {
     MUSIC_LIST[index] = {
       ...req.body,
     };
-    res.send(MUSIC_LIST);
+    res.send(MUSIC_LIST[index]);
 })
 
 app.delete('/music/delete/:id', (req, res) => {

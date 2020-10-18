@@ -16,7 +16,7 @@ export class MusicCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
-    this.musicService.createMusic(this.musicForm.value);
+    this.musicService.createMusic(this.musicForm.value).subscribe(_=>{});
     this.location.back();
   }
 }

@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Music, MusicService } from 'src/app/music.service';
 
@@ -16,11 +15,14 @@ export class MusicListComponent implements OnInit {
   }
 
   loadMusicList() {
-    this.musicList = this.musicService.listMusic();
+    this.musicService.listMusic().subscribe((data) => {
+      this.musicList = data.result;
+    });
   }
 
   deleteMusic(id) {
-    this.musicService.deleteMusic(id);
-    this.loadMusicList();
+    this.musicService.deleteMusic(id).subscribe((_) => {
+      this.loadMusicList();
+    });
   }
 }

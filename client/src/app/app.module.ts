@@ -8,6 +8,7 @@ import { ManagementModule } from './management/management.module';
 import { SushiModule } from './sushi/sushi.module';
 import { HomeModule } from './home/home.module';
 import { ButtonModule } from 'primeng/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,8 @@ import { ButtonModule } from 'primeng/button';
     ManagementModule,
     SharedModule,
     SushiModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

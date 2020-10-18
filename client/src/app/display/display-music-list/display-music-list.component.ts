@@ -11,6 +11,8 @@ export class DisplayMusicListComponent implements OnInit {
   constructor(private musicService: MusicService) {}
 
   ngOnInit(): void {
-    this.musicList = this.musicService.listMusic();
+    this.musicService.listMusic().subscribe((data) => {
+      this.musicList = data.result;
+    });
   }
 }

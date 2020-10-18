@@ -16,6 +16,8 @@ export class DisplayMusicDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.music = this.musicService.loadMusic(id);
+    this.musicService.loadMusic(id).subscribe((data) => {
+      this.music = data;
+    });
   }
 }
